@@ -8,6 +8,8 @@ console.log('hi',name1)
 // name1 = 2
 console.log(typeof name1)
 
+
+
 // type any
 let js = JSON.parse('55')
 console.log(typeof js)

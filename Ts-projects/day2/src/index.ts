@@ -77,6 +77,9 @@ const Max2 = (arr:number[])=>{
     });
 return maxval}
 
+
+
+
 console.log(Max([10,30,60,0,98,1]))
 console.log(Max2([10,30,600,0,98,1]))
 
