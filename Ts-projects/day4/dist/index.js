@@ -1,5 +1,8 @@
 "use strict";
 // started with Generics
+Object.defineProperty(exports, "__esModule", { value: true });
+const Shapes_1 = require("./Shapes");
+const Tax_1 = require("./Tax");
 // generic classes
 class KeyValues {
     constructor(key, value) {
@@ -42,3 +45,9 @@ class Bye {
 }
 let hi = new Bye('hello');
 console.log(hi.value);
+// modules import and export in TS
+let name1 = new Shapes_1.Circle('ahil');
+name1.show();
+let netIncome = (0, Tax_1.CalcTax)(10000);
+console.log("salary", netIncome);
+//# sourceMappingURL=index.js.map

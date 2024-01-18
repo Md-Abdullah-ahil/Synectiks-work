@@ -1,5 +1,8 @@
 // started with Generics
 
+import { Circle } from "./Shapes"
+import { CalcTax } from "./Tax"
+
 // generic classes
 
 class KeyValues<K,V>{          //declaring the types using generic using K, V
@@ -49,3 +52,12 @@ class Bye <T extends number | string | {}>{
 let hi = new Bye<string>('hello')
 console.log(hi.value)
 
+
+// modules import and export in TS
+
+let name1 = new Circle('ahil');
+name1.show();
+
+
+let netIncome = CalcTax(10_000);
+console.log("salary",netIncome)
