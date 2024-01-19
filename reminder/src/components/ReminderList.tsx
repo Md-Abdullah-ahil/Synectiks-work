@@ -1,14 +1,19 @@
 import Reminders from "../models/Reminders"
 
 interface ReminderListProps  {
-    items:Reminders[]
+    items:Reminders[];
+    onRemoveReminder : (id:number)=> void;
 }
-const ReminderList = ({items}:ReminderListProps) => {
-    console.log(items)
+const ReminderList = ({items,onRemoveReminder }:ReminderListProps) => {
+    // console.log(items)
   return (
-    <ul className="list-group  bg-gradient border-black">
-      {items.map(item => <li key={item.id} className="list-group-items text-danger border-1 text-text-decoration-none list-unstyled fw-bold h2">{item.title}</li>)
-    }</ul>
+   <ul className="list-group bg-light border-2 p-2 border-black ">
+    {items.map(item=>
+      <li key={item.id} className="list-group-item bg-dark text-light text-capitalize  "><span>{item.title} </span>
+      <button className="btn btn-primary mx-4 rounded-pill" onClick={()=>onRemoveReminder(item.id)}>Delete</button> </li>
+    )}
+
+   </ul>
   )
 }
 
